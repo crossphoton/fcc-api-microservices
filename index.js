@@ -1,7 +1,12 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Good, now head over to /api/timestamp");
+});
 
 app.get("/api/timestamp/:case", (req, res) => {
   let para = req.params.case;
@@ -22,4 +27,4 @@ app.get("/api/timestamp/", (req, res) => {
   res.json({ unix: date.getTime(), utc: date.toUTCString() });
 });
 
-app.listen(80);
+app.listen(8000);
