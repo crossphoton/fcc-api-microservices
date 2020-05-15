@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon index.js",
-    "start": "node index.js"
+    "start": "node index.js",
+    "headers": "node headers.js",
+    "timestamp": "node timestamp.js",
+    "url": "node url.js",
+    "excercise": "node exercise.js",
+    "file": "node file.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +27,6 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.4"
   }
 }
